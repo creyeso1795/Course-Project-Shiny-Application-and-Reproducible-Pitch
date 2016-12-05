@@ -53,7 +53,7 @@ steps_by_day <- aggregate(steps ~ date, data, sum)
 hist(steps_by_day$steps, main = paste("Total Steps Each Day"), col="blue", xlab="Number of Steps")
 ```
 
-![img-2](./Project_1_files/figure/img-2.png) 
+See picture 2 (img-2)
 
 ```r
 rmean <- mean(steps_by_day$steps)
@@ -74,7 +74,7 @@ steps_by_interval <- aggregate(steps ~ interval, data, mean)
 plot(steps_by_interval$interval,steps_by_interval$steps, type="l", xlab="Interval", ylab="Number of Steps",main="Average Number of Steps per Day by Interval")
 ```
 
-![plot of chunk unnamed-chunk-3](./Reproducible_Research_Project_1_Steps_files/figure-html/unnamed-chunk-3.png) 
+See picture 3 (img-3)
 
 ```r
 max_interval <- steps_by_interval[which.max(steps_by_interval$steps),1]
@@ -108,7 +108,7 @@ hist(steps_by_day$steps, main = paste("Total Steps Each Day"), col="red", xlab="
 legend("topright", c("Imputed", "Non-imputed"), col=c("blue", "red"), lwd=10)
 ```
 
-![plot of chunk unnamed-chunk-6](./Reproducible_Research_Project_1_Steps_files/figure-html/unnamed-chunk-6.png) 
+See picture 4 (img-4)
 
 Calculate new mean and median for imputed data. 
 
@@ -151,4 +151,4 @@ library(lattice)
 xyplot(steps_by_interval_i$steps ~ steps_by_interval_i$interval|steps_by_interval_i$dow, main="Average Steps per Day by Interval",xlab="Interval", ylab="Steps",layout=c(1,2), type="l")
 ```
 
-![plot of chunk unnamed-chunk-10](./Reproducible_Research_Project_1_Steps_files/figure-html/unnamed-chunk-10.png) 
+See picture 5 (img-5) 
