@@ -15,7 +15,7 @@ shinyUI(fluidPage(
   # Application title
   titlePanel("Predicting The Price of the Diamond"),
   titlePanel(" Author: Carlos Reyes"),
-  titlePanel(" Date: 30/10/2017  "),
+  titlePanel(" Date: 02/08/2019  "),
   
   # Sidebar with options selectors 
   sidebarLayout(
